@@ -44,6 +44,7 @@ function addOCSPHandler(tlsServer) {
 }
 
 async function runServerTests(testName) {
+  console.log('running', testName);
   let hasError = false;
   // test TLS 1.3
   if (!await receivesOCSPResponse('localhost', LOCAL_PORT, '1.3')) {
@@ -55,8 +56,8 @@ async function runServerTests(testName) {
     console.warn('Server did not send OCSP response with TLS 1.2');
     hasError = true;
   }
-  if (hasError) console.log(testName, ': Test failed');
-  else console.log(testName, ': OK');
+  if (hasError) console.log(testName, ': Test failed\n');
+  else console.log(testName, ': OK\n');
 }
 
 async function testTlsServerWithCurves() {
