@@ -1,0 +1,10 @@
+{
+  "name": "node-ocsp-bug-repro",
+  "version": "1.0.0",
+  "main": "ocsp_bug_repro.js",
+  "scripts": {
+    "test": "node ocsp_bug_repro.js"
+  },
+  "author": "drash-course",
+  "license": "ISC"
+}
